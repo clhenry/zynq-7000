@@ -1,0 +1,88 @@
+#define XGPIOPS                 (0xE000A000)
+
+#define XGPIOPS_DATA_LSW_OFFSET (0x00000000)
+#define XGPIOPS_DATA_MSW_OFFSET (0x00000004)
+
+#define MASK_DATA_0_LSW         (XGPIOPS + XGPIOPS_DATA_LSW_OFFSET + 0x00)
+#define MASK_DATA_0_MSW         (XGPIOPS + XGPIOPS_DATA_MSW_OFFSET + 0x00)
+#define MASK_DATA_1_LSW         (XGPIOPS + XGPIOPS_DATA_LSW_OFFSET + 0x08)
+#define MASK_DATA_1_MSW         (XGPIOPS + XGPIOPS_DATA_MSW_OFFSET + 0x08)
+#define MASK_DATA_2_LSW         (XGPIOPS + XGPIOPS_DATA_LSW_OFFSET + 0x10)
+#define MASK_DATA_2_MSW         (XGPIOPS + XGPIOPS_DATA_LSW_OFFSET + 0x10)
+#define MASK_DATA_3_LSW         (XGPIOPS + XGPIOPS_DATA_LSW_OFFSET + 0x18)
+#define MASK_DATA_3_MSW         (XGPIOPS + XGPIOPS_DATA_MSW_OFFSET + 0x18)
+
+#define XGPIOPS_DATA_OFFSET     (0x00000040)
+
+#define DATA_0                  (XGPIOPS + XGPIOPS_DATA_OFFSET + 0x00)
+#define DATA_1                  (XGPIOPS + XGPIOPS_DATA_OFFSET + 0x40)
+#define DATA_2                  (XGPIOPS + XGPIOPS_DATA_OFFSET + 0x80)
+#define DATA_3                  (XGPIOPS + XGPIOPS_DATA_OFFSET + 0xC0)
+
+#define DATA_0_RO               (XGPIOPS + 0x60)
+#define DATA_1_RO               (XGPIOPS + 0x64)
+#define DATA_2_RO               (XGPIOPS + 0x68)
+#define DATA_3_RO               (XGPIOPS + 0x6C)
+
+#define XGPIOPS_DIRM_OFFSET     (0x00000204)
+
+#define DIRM_0                  (XGPIOPS + XGPIOPS_DIRM_OFFSET)
+#define DIRM_1                  (XGPIOPS + 0x00000244)
+#define DIRM_2                  (XGPIOPS + 0x00000284)
+#define DIRM_3                  (XGPIOPS + 0x000002C4)
+
+#define XGPIOPS_OUTEN_OFFSET    (0x00000208)
+
+#define OEN_0                   (XGPIOPS + XGPIOPS_OUTEN_OFFSET + 0x00)
+#define OEN_1                   (XGPIOPS + XGPIOPS_OUTEN_OFFSET + 0x40)
+#define OEN_2                   (XGPIOPS + XGPIOPS_OUTEN_OFFSET + 0x80)
+#define OEN_3                   (XGPIOPS + XGPIOPS_OUTEN_OFFSET + 0xC0)
+
+#define XGPIOPS_INTMASK_OFFSET  (0x0000020C)
+
+#define INT_MASK_0              (XGPIOPS + XGPIOPS_INTMASK_OFFSET + 0x00)
+#define INT_MASK_1              (XGPIOPS + XGPIOPS_INTMASK_OFFSET + 0x40)
+#define INT_MASK_2              (XGPIOPS + XGPIOPS_INTMASK_OFFSET + 0x80)
+#define INT_MASK_3              (XGPIOPS + XGPIOPS_INTMASK_OFFSET + 0xC0)
+
+#define XGPIOPS_INTEN_OFFSET    (0x00000210)
+
+#define INT_EN_0                (XGPIOPS + XGPIOPS_INTEN_OFFSET + 0x00)
+#define INT_EN_1                (XGPIOPS + XGPIOPS_INTEN_OFFSET + 0x40)
+#define INT_EN_2                (XGPIOPS + XGPIOPS_INTEN_OFFSET + 0x80)
+#define INT_EN_3                (XGPIOPS + XGPIOPS_INTEN_OFFSET + 0xC0)
+
+#define XGPIOPS_INTDIS_OFFSET   (0x00000214)
+
+#define INT_DIS_0               (XGPIOPS + XGPIOPS_INTDIS_OFFSET + 0x00)
+#define INT_DIS_1               (XGPIOPS + XGPIOPS_INTDIS_OFFSET + 0x40)
+#define INT_DIS_2               (XGPIOPS + XGPIOPS_INTDIS_OFFSET + 0x80)
+#define INT_DIS_3               (XGPIOPS + XGPIOPS_INTDIS_OFFSET + 0xC0)
+
+#define XGPIOPS_INTSTS_OFFSET   (0x00000218)
+
+#define INT_STAT_0              (XGPIOPS + XGPIOPS_INTSTS_OFFSET + 0x00)
+#define INT_STAT_1              (XGPIOPS + XGPIOPS_INTSTS_OFFSET + 0x40)
+#define INT_STAT_2              (XGPIOPS + XGPIOPS_INTSTS_OFFSET + 0x80)
+#define INT_STAT_3              (XGPIOPS + XGPIOPS_INTSTS_OFFSET + 0xC0)
+
+#define XGPIOPS_INTTYPE_OFFSET  (0x0000021C)
+
+#define INT_TYPE_0              (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x00)
+#define INT_TYPE_1              (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x40)
+#define INT_TYPE_2              (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x80)
+#define INT_TYPE_3              (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0xC0)
+
+#define XGPIOPS_INTPOL_OFFSET   (0x00000220)
+
+#define INT_POLARITY_0          (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x00)
+#define INT_POLARITY_1          (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x40)
+#define INT_POLARITY_2          (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0x80)
+#define INT_POLARITY_3          (XGPIOPS + XGPIOPS_INTTYPE_OFFSET + 0xC0)
+
+#define XGPIOPS_INTANY_OFFSET   (0x00000224)
+
+#define INT_ANY_0               (XGPIOPS + XGPIOPS_INTANY_OFFSET + 0x00)
+#define INT_ANY_1               (XGPIOPS + XGPIOPS_INTANY_OFFSET + 0x40)
+#define INT_ANY_2               (XGPIOPS + XGPIOPS_INTANY_OFFSET + 0x80)
+#define INT_ANY_3               (XGPIOPS + XGPIOPS_INTANY_OFFSET + 0xC0)
